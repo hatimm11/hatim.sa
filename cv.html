@@ -72,13 +72,8 @@
   .cert .row{display:grid;grid-template-columns:1fr auto;gap:4px 20px;align-items:baseline}
   @media(max-width:560px){ .cert .row{grid-template-columns:1fr} }
   .cert .org a{color:inherit}
-  .cv-courses{columns:2;column-gap:36px;list-style:none;margin-top:6px}
-  .cv-courses li{break-inside:avoid;padding:9px 0;border-top:1px solid var(--line);font-size:.98rem;letter-spacing:-.01em}
-  .cv-courses li span{display:block;font-size:13px;color:var(--sub)}
-  .cv-courses li em.sk{display:block;font-style:normal;font-size:12.5px;color:var(--ink);opacity:.72;margin-top:2px}
-  .note{color:var(--sub);font-size:1.02rem;margin-bottom:12px}
-  @media(max-width:640px){ .cv-courses{columns:1} }
-  @media print{ .cv-courses li span,.note{color:#333} .cert .org a{color:#0a5bb5} }
+  .note{color:var(--sub);font-size:1.02rem;max-width:72ch;line-height:1.55}
+    @media print{ .note{color:#333} .cert .org a{color:#0a5bb5} }
 </style>
 </head>
 <body>
@@ -91,7 +86,7 @@
 <div class="page">
   <header class="cv">
     <h1>Hatim Alsufyani</h1>
-    <div class="role">Educational Leadership, EdTech &amp; AI in Education</div>
+    <div class="role">EdTech founder &amp; Ph.D. researcher in AI for education administration</div>
     <div class="contact">
       <span>Yanbu, Saudi Arabia</span>
       <span>+966 56 005 3460</span>
@@ -103,7 +98,7 @@
 
   <section class="blk">
     <div class="h">Profile</div>
-    <p class="lede">Education professional and EdTech founder with nine years of secondary teaching experience at the Ministry of Education. Ph.D. candidate in Educational Administration and Supervision researching the adoption of agentic AI in public-education administration, with a Professional Master's in E-Learning and a Bachelor's in Business Administration. Founder of Shawahid — a free tools hub, a web platform, and an iOS app — that helps Saudi teachers manage classes, motivate students, and document evidence for their annual performance evaluation.</p>
+    <p class="lede">Nine years at Saudi Arabia's Ministry of Education. Founder of Shawahid and Ph.D. candidate at King Khalid University researching the requirements for employing agentic AI in education administration. I combine field experience, instructional design, and full-stack product development to build tools that give schools more room for learning.</p>
   </section>
 
   <section class="blk">
@@ -120,11 +115,11 @@
       </ul>
     </div>
     <div class="item">
-      <div class="row"><span class="t">Secondary School Teacher</span><span class="when">Oct 2017 – Present</span></div>
-      <div class="org">Ministry of Education — Yanbu High School for Boys</div>
+      <div class="row"><span class="t">Ministry of Education</span><span class="when">Oct 2017 – Present</span></div>
+      <div class="org">Yanbu, Saudi Arabia</div>
       <ul>
-        <li>Teach financial literacy, vocational and career education, administrative sciences, and managerial skills at the secondary level.</li>
-        <li>Design and deliver lessons using digital tools and active-learning strategies for critical thinking and practical application of management concepts.</li>
+        <li>Nine years in public education, working with financial literacy, vocational and career education, and managerial skills programs at the secondary level.</li>
+        <li>Apply digital tools and active-learning strategies that build critical thinking and the practical application of management concepts.</li>
         <li>Designed and developed Tawasol Yanbu — a staff communication platform consolidating supervision schedules, absence and tardiness notifications, WhatsApp messaging, templates, a central contact database, and counselling case tracking.</li>
         <li>Deliver professional and technical training programs across education, management, and digital learning.</li>
       </ul>
@@ -134,7 +129,7 @@
   <section class="blk">
     <div class="h">Education &amp; research</div>
     <div class="edu">
-      <div class="e"><div><div class="t">Ph.D. in Education, Educational Administration &amp; Supervision</div><div class="o">King Khalid University, College of Education, Abha (full-time)</div><div class="x">Coursework completed: 19 courses, 45 credit hours, cumulative GPA 4.59/5.00. Comprehensive exam passed. Dissertation in progress on the requirements for employing agentic AI to develop administrative work in Saudi public-education departments.</div><div class="x">Coursework included strategic planning, leadership of educational institutions, knowledge management, performance assessment and quality assurance, future studies, operations research, human-resource planning, and advanced inferential statistics.</div></div><div class="d">2023 – Present</div></div>
+      <div class="e"><div><div class="t">Ph.D. in Education, Educational Administration &amp; Supervision</div><div class="o">King Khalid University, College of Education, Abha</div><div class="x">Dissertation: <i>Requirements for Employing Agentic AI to Advance Administrative Work across General Education Departments in the Kingdom of Saudi Arabia</i>. Coursework GPA 4.59/5.00.</div></div><div class="d">2023 – Present</div></div>
       <div class="e"><div><div class="t">Professional Master's in E-Learning</div><div class="o">King Abdulaziz University, Jeddah</div></div><div class="d">2022</div></div>
       <div class="e"><div><div class="t">Postgraduate Diploma in Education</div><div class="o">Taif University, Taif</div></div><div class="d">2017</div></div>
       <div class="e"><div><div class="t">Bachelor's in Business Administration (Management)</div><div class="o">Taif University, Taif</div></div><div class="d">2015</div></div>
@@ -162,24 +157,8 @@
   </section>
 
   <section class="blk">
-    <div class="h">Courses</div>
-    <p class="note">14 Coursera courses completed through FutureX, the national e-learning platform. 79 hours in total.</p>
-    <ul class="cv-courses">
-      <li>Agentic AI and AI Agents: A Primer for Leaders<span>Vanderbilt University, 6 hours</span><em class="sk">Leadership, Education, Innovation, Sales</em></li>
-      <li>Agile Leadership: Introduction to Change<span>University of Colorado System, 9 hours</span><em class="sk">Agile leadership</em></li>
-      <li>Managing as a Coach<span>University of California, Davis, 11 hours</span><em class="sk">Leadership, Management</em></li>
-      <li>Giving Helpful Feedback<span>University of Colorado Boulder, 5 hours</span><em class="sk">Creativity, Negative feedback, Teamwork</em></li>
-      <li>Initiating and Planning Projects<span>University of California, Irvine, 4 hours</span><em class="sk">Project management, Project charter, Stakeholder engagement, Project stakeholders, Planning</em></li>
-      <li>Effective Problem-Solving and Decision-Making<span>University of California, Irvine, 8 hours</span></li>
-      <li>Solving Problems with Creative and Critical Thinking<span>IBM, 3 hours</span><em class="sk">Problem solving, Critical thinking, Creative thinking</em></li>
-      <li>Work Smarter, Not Harder: Time Management for Personal &amp; Professional Productivity<span>University of California, Irvine, 9 hours</span><em class="sk">Goal setting, Time management, Prioritization, Scheduling</em></li>
-      <li>Delivering Quality Work with Agility<span>IBM, 1 hour</span><em class="sk">Agility, Research</em></li>
-      <li>Communication in the 21st Century Workplace<span>University of California, Irvine, 10 hours</span><em class="sk">Communication strategies</em></li>
-      <li>Collaborate Effectively for Professional Success<span>IBM, 2 hours</span><em class="sk">Teamwork, Collaboration</em></li>
-      <li>Developing Interpersonal Skills<span>IBM, 3 hours</span></li>
-      <li>Present with Purpose: Create/Deliver Effective Presentations<span>IBM, 2 hours</span><em class="sk">Body language, Presentations</em></li>
-      <li>People and Soft Skills Assessment<span>IBM, 2 hours</span><em class="sk">Presentations, Communications, Problem solving</em></li>
-    </ul>
+    <div class="h">Professional development</div>
+    <p class="note">14 Coursera courses (79 hours) completed through FutureX, from the University of California, the University of Colorado, Vanderbilt University, and IBM, covering leadership and agile change, coaching and feedback, project planning, problem-solving, time management, communication, and presentation skills.</p>
   </section>
 
   <section class="blk skills">
