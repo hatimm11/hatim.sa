@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hatim Alsufyani — EdTech Founder &amp; AI-in-Education Researcher</title>
-<meta name="description" content="Hatim Alsufyani works at Saudi Arabia's Ministry of Education, builds EdTech products, and researches how agentic AI can advance administrative work in education. Founder of Shawahid.">
+<title>Hatim Alsufyani — EdTech &amp; AI in Education</title>
+<meta name="description" content="Hatim Alsufyani works at Saudi Arabia's Ministry of Education, builds EdTech products, and researches the use of AI in education administration.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
@@ -106,9 +106,6 @@
   .about .atext{margin-top:30px;max-width:46ch}
   .about .atext p{font-size:1.2rem;color:var(--sub);line-height:1.5}
   .about .atext p + p{margin-top:15px}
-  .about-photo{position:absolute;top:96px;inset-inline-end:max(24px,calc((100% - 1000px)/2 + 24px));width:min(330px,32vw);height:auto;display:block;pointer-events:none;z-index:0}
-  @media(min-width:821px){ .about .wrap{padding-inline-end:clamp(300px,34%,380px)} }
-  @media(max-width:820px){ .about-photo{position:static;margin:24px auto 0;width:min(270px,66vw)} }
 
   .cred-list{margin-top:48px;border-top:1px solid var(--line)}
   .cred{display:grid;grid-template-columns:1fr auto;gap:6px 28px;align-items:baseline;padding:28px 4px;border-bottom:1px solid var(--line)}
@@ -154,6 +151,24 @@
   .co-more .o{display:none} .co-more[open] .o{display:inline} .co-more[open] .c{display:none}
   .co-more .co-cols{margin-top:26px}
   .contact .sub{color:var(--sub);font-size:clamp(1.05rem,1.8vw,1.25rem);max-width:46ch;margin:18px auto 0;letter-spacing:-.01em}
+
+  .hero{min-height:0;display:block;text-align:start;padding:88px 24px 0}
+  .hero .hin{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr minmax(240px,340px);gap:48px;align-items:end}
+  .hero .htext{align-self:center;padding-bottom:40px}
+  .hero h1{font-size:clamp(2.6rem,6.2vw,4.8rem);max-width:none;margin:0}
+  .hero p{margin:18px 0 0;max-width:38ch}
+  .hero .loc{margin-top:14px}
+  .hero .cta{justify-content:flex-start;margin-top:28px}
+  .hph img{width:100%;height:auto;display:block}
+  @media(max-width:820px){
+    .hero{padding-top:72px;text-align:center}
+    .hero .hin{grid-template-columns:1fr;gap:4px}
+    .hph{order:-1;width:min(230px,62vw);margin:0 auto;aspect-ratio:4/5;overflow:hidden;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+    .hph img{height:100%;object-fit:cover;object-position:top}
+    .hero .htext{padding-bottom:56px}
+    .hero p{margin-inline:auto}
+    .hero .cta{justify-content:center}
+  }
 </style>
 </head>
 <body>
@@ -175,40 +190,39 @@
 
 <main id="top">
   <section class="hero">
-    <div class="eyebrow rv">Hatim Alsufyani</div>
-    <h1 class="rv">Education,<br>run smarter.</h1>
-    <div class="loc rv">Yanbu, Saudi Arabia</div>
-    <p class="rv">I work at Saudi Arabia's Ministry of Education, build EdTech products, and research how agentic AI can take on routine administrative work, so schools have more room for learning.</p>
-    <div class="cta rv">
-      <a class="btn btn-p" href="#contact">Get in touch</a>
-      <a class="btn btn-t" href="cv.html">View CV <span class="ch">›</span></a>
+    <div class="hin">
+      <div class="htext">
+        <h1 class="rv">Hatim Alsufyani</h1>
+        <p class="rv">I work at the Ministry of Education, build EdTech products, and research the use of AI in education administration.</p>
+        <div class="loc rv">Yanbu, Saudi Arabia</div>
+        <div class="cta rv">
+          <a class="btn btn-p" href="#contact">Get in touch</a>
+          <a class="btn btn-t" href="cv.html">View CV <span class="ch">›</span></a>
+        </div>
+      </div>
+      <div class="hph rv"><img src="portrait.png" alt="Hatim Alsufyani" width="780" height="1341" fetchpriority="high"></div>
     </div>
-  </section>
-
-  <section class="statement">
-    <p class="rv">Nine years at the Ministry of Education. Doctoral research on agentic AI. Products built for Saudi teachers.</p>
   </section>
 
   <section class="sec soft about" id="about">
     <div class="wrap">
       <div class="kicker rv">About</div>
-      <h2 class="h2 rv">Building from inside the system.</h2>
+      <h2 class="h2 rv">Education, technology, and research.</h2>
       <div class="atext">
-        <p class="rv">For nine years I've worked at the Ministry of Education, close to the everyday realities of schools. That vantage point shapes the questions I research and the products I build.</p>
-        <p class="rv">I design and build EdTech products like Shawahid, and I'm a Ph.D. candidate at King Khalid University researching what it takes to employ agentic AI in education administration. I hold a Professional Master's in E-Learning, a Bachelor's in Business Administration, and three advanced professional certificates from the National eLearning Center.</p>
+        <p class="rv">I've worked at the Ministry of Education for nine years. I design and build EdTech products, most notably Shawahid, a free platform for teachers in Saudi Arabia.</p>
+        <p class="rv">I'm a Ph.D. candidate in Educational Administration and Supervision at King Khalid University, researching the use of agentic AI in education administration. I hold a Professional Master's in E-Learning and a Bachelor's in Business Administration.</p>
       </div>
     </div>
-    <img class="about-photo rv" src="portrait.png" alt="Hatim Alsufyani" width="780" height="1341">
   </section>
 
   <section class="sec" id="work">
     <div class="wrap">
-      <div class="kicker rv">Selected work</div>
-      <h2 class="h2 rv">Built for real schools.</h2>
+      <div class="kicker rv">Work</div>
+      <h2 class="h2 rv">Selected projects.</h2>
       <div class="work-list">
-        <div class="row rv"><div class="t"><a href="https://free.shawahid.sa" target="_blank" rel="noopener">Shawahid</a></div><div class="tag">Founder</div><div class="d">A free Arabic platform that helps Saudi teachers manage classes, motivate students, and document evidence for their annual performance review. It includes a tools hub with 228 evidence templates and 433 curriculum plans, a web platform, and the Shawahid Al-Muallim iOS app.</div></div>
-        <div class="row rv"><div class="t">Tawasol Yanbu</div><div class="tag">Designer &amp; developer</div><div class="d">A staff communication platform that brings supervision schedules, absence and tardiness alerts, WhatsApp messaging, and counselling case tracking into one place for school staff.</div></div>
-        <div class="row rv"><div class="t">Yanbu Secondary Tools &amp; Services</div><div class="tag">Designer &amp; developer</div><div class="d">A school portal that gathers evidence tools and services for teachers and students.</div></div>
+        <div class="row rv"><div class="t"><a href="https://free.shawahid.sa" target="_blank" rel="noopener">Shawahid</a></div><div class="tag">Founder</div><div class="d">A free Arabic platform that helps teachers manage their classes and document performance evidence. It includes a tools hub with 228 evidence templates and 433 curriculum plans, a web platform, and an iOS app.</div></div>
+        <div class="row rv"><div class="t">Tawasol Yanbu</div><div class="tag">Designer &amp; developer</div><div class="d">A communication platform for school staff: supervision schedules, absence and tardiness alerts, WhatsApp messages, and student counselling cases.</div></div>
+        <div class="row rv"><div class="t">Yanbu Secondary Tools &amp; Services</div><div class="tag">Designer &amp; developer</div><div class="d">A school portal for evidence tools and services.</div></div>
       </div>
     </div>
   </section>
@@ -216,11 +230,11 @@
   <section class="sec soft" id="focus">
     <div class="wrap" style="text-align:center">
       <div class="kicker rv">What I do</div>
-      <h2 class="h2 rv" style="margin-inline:auto">Where research, product, and learning design meet.</h2>
+      <h2 class="h2 rv" style="margin-inline:auto">Research, products, and training.</h2>
       <div class="cards">
-        <div class="card rv"><h3>AI in education administration</h3><p>Doctoral research on the readiness, governance, and responsible adoption of agentic AI in Saudi education departments.</p></div>
-        <div class="card rv"><h3>EdTech products</h3><p>Arabic-first web and iOS products, designed and built end to end with Next.js, Supabase, and SwiftUI.</p></div>
-        <div class="card rv"><h3>Learning design &amp; training</h3><p>Instructional design, e-learning quality assurance, and hands-on training for educators.</p></div>
+        <div class="card rv"><h3>AI in education administration</h3><p>Research on adopting agentic AI in education departments.</p></div>
+        <div class="card rv"><h3>EdTech products</h3><p>Designing and building Arabic web and iOS products.</p></div>
+        <div class="card rv"><h3>Learning design &amp; training</h3><p>Instructional design, e-learning quality, and training.</p></div>
       </div>
       <div class="chips rv">
         <a class="chip" href="#research"><b>Ph.D.</b> candidate · Educational Administration</a>
@@ -234,7 +248,7 @@
   <section class="sec" id="credentials">
     <div class="wrap">
       <div class="kicker rv">Credentials</div>
-      <h2 class="h2 rv">Certified in <span class="nw">e-learning</span> delivery, design, and quality.</h2>
+      <h2 class="h2 rv">Professional certificates.</h2>
       <div class="cred-list">
         <div class="cred rv"><div class="ct">Online Teaching / Training <span class='nw'>(OTT-A)</span></div><a class="vlink" href="https://ce.nelc.gov.sa/storage/pdf/otta/pc23N25DRE6QLK-ar-1683497890.pdf" target="_blank" rel="noopener">View certificate <span class="ch">›</span></a><div class="cm">Professional Certificate, Advanced Level, from the National eLearning Center. Issued May 2023, valid until May 2027.</div><div class="cid">Credential ID <bdi>pc23N25DRE6QLK</bdi></div></div>
         <div class="cred rv"><div class="ct">eLearning Experience Design <span class='nw'>(eLXD-A)</span></div><a class="vlink" href="https://ce.nelc.gov.sa/storage/pdf/elxda/pc2301XP6WRQ4K-ar-1683495524.pdf" target="_blank" rel="noopener">View certificate <span class="ch">›</span></a><div class="cm">Professional Certificate, Advanced Level, from the National eLearning Center. Issued May 2023, valid until May 2027.</div><div class="cid">Credential ID <bdi>pc2301XP6WRQ4K</bdi></div></div>
@@ -279,20 +293,19 @@
   <section class="sec soft research" id="research">
     <div class="wrap">
       <div class="kicker rv">Research</div>
-      <h2 class="h2 rv">What it takes to put agentic AI to work in education.</h2>
+      <h2 class="h2 rv">Doctoral dissertation.</h2>
       <article class="diss rv">
-        <div class="dl">Doctoral dissertation</div>
         <h3 class="dt">Requirements for Employing Agentic AI to Advance Administrative Work across General Education Departments in the Kingdom of Saudi Arabia</h3>
-        <p class="ds">Agentic AI goes beyond answering questions: it can plan and carry out multi-step tasks on its own. My study identifies what Saudi education departments need to employ it responsibly in administrative work. Grounded in organizational-readiness research, it examines requirements across six dimensions, to help decision-makers adopt it with confidence.</p>
+        <p class="ds">The study examines the requirements for using agentic AI, systems that can plan and carry out tasks on their own, in the administrative work of Saudi education departments. It covers six dimensions:</p>
         <ul class="dims"><li>Leadership</li><li>Organizational</li><li>Human</li><li>Technical</li><li>Ethical</li><li>Legislative</li></ul>
-        <div class="dm">Ph.D. in Educational Administration and Supervision, King Khalid University. In progress.</div>
+        <div class="dm">King Khalid University, College of Education. In progress.</div>
       </article>
     </div>
   </section>
 
   <section class="contact" id="contact">
-    <h2 class="rv">Working on AI in education? Let's talk.</h2>
-    <p class="sub rv">Open to research collaboration, EdTech partnerships, and training for educators.</p>
+    <h2 class="rv">Get in touch.</h2>
+    <p class="sub rv">For research collaboration, partnerships, or training.</p>
     <div class="cta rv">
       <a class="btn btn-p" href="mailto:hello@hatim.sa">hello@hatim.sa</a>
       <a class="btn btn-t" href="https://www.linkedin.com/in/hatim-alsufyani/" target="_blank" rel="noopener">LinkedIn <span class="ch">›</span></a>

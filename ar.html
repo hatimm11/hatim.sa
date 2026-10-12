@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>حاتم السفياني — مؤسّس منصّات تعليمية وباحث في الذكاء الاصطناعي بالتعليم</title>
-<meta name="description" content="حاتم السفياني يعمل في وزارة التعليم، ويبني منتجات تقنية تعليمية، ويبحث كيف يُسهم الذكاء الاصطناعي الوكيل في تطوير العمل الإداري بالتعليم. مؤسّس «شواهد».">
+<title>حاتم السفياني — التقنية والذكاء الاصطناعي في التعليم</title>
+<meta name="description" content="حاتم السفياني يعمل في وزارة التعليم، ويطوّر منتجات تقنية تعليمية، ويبحث في توظيف الذكاء الاصطناعي في الإدارة التعليمية.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
@@ -105,9 +105,6 @@
   .about .atext{margin-top:30px;max-width:46ch}
   .about .atext p{font-size:1.2rem;color:var(--sub);line-height:1.8}
   .about .atext p + p{margin-top:15px}
-  .about-photo{position:absolute;top:96px;inset-inline-end:max(24px,calc((100% - 1000px)/2 + 24px));width:min(330px,32vw);height:auto;display:block;pointer-events:none;z-index:0}
-  @media(min-width:821px){ .about .wrap{padding-inline-end:clamp(300px,34%,380px)} }
-  @media(max-width:820px){ .about-photo{position:static;margin:24px auto 0;width:min(270px,66vw)} }
 
   .cred-list{margin-top:48px;border-top:1px solid var(--line)}
   .cred{display:grid;grid-template-columns:1fr auto;gap:6px 28px;align-items:baseline;padding:28px 4px;border-bottom:1px solid var(--line)}
@@ -168,6 +165,24 @@
   .diss .ds{line-height:1.85;letter-spacing:0}
   .contact .sub{line-height:1.7;letter-spacing:0}
   .co-more[open] summary .ch{transform:rotate(-90deg)}
+
+  .hero{min-height:0;display:block;text-align:start;padding:88px 24px 0}
+  .hero .hin{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr minmax(240px,340px);gap:48px;align-items:end}
+  .hero .htext{align-self:center;padding-bottom:40px}
+  .hero h1{font-size:clamp(2.6rem,6.2vw,4.8rem);max-width:none;margin:0}
+  .hero p{margin:18px 0 0;max-width:38ch}
+  .hero .loc{margin-top:14px}
+  .hero .cta{justify-content:flex-start;margin-top:28px}
+  .hph img{width:100%;height:auto;display:block}
+  @media(max-width:820px){
+    .hero{padding-top:72px;text-align:center}
+    .hero .hin{grid-template-columns:1fr;gap:4px}
+    .hph{order:-1;width:min(230px,62vw);margin:0 auto;aspect-ratio:4/5;overflow:hidden;-webkit-mask-image:linear-gradient(#000 78%,transparent);mask-image:linear-gradient(#000 78%,transparent)}
+    .hph img{height:100%;object-fit:cover;object-position:top}
+    .hero .htext{padding-bottom:56px}
+    .hero p{margin-inline:auto}
+    .hero .cta{justify-content:center}
+  }
 </style>
 </head>
 <body>
@@ -189,40 +204,39 @@
 
 <main id="top">
   <section class="hero">
-    <div class="eyebrow rv">حاتم السفياني</div>
-    <h1 class="rv">تعليمٌ يُدار بذكاء.</h1>
-    <div class="loc rv">ينبع، المملكة العربية السعودية</div>
-    <p class="rv">أعمل في وزارة التعليم، وأبني منتجات تقنية تعليمية، وأبحث كيف يتولّى الذكاء الاصطناعي الوكيل المهام الإدارية الروتينية، لتتفرّغ المدارس أكثر للتعلّم.</p>
-    <div class="cta rv">
-      <a class="btn btn-p" href="#contact">تواصل معي</a>
-      <a class="btn btn-t" href="cv.html">السيرة الذاتية <span class="ch">‹</span></a>
+    <div class="hin">
+      <div class="htext">
+        <h1 class="rv">حاتم السفياني</h1>
+        <p class="rv">أعمل في وزارة التعليم، وأطوّر منتجات تقنية تعليمية، وأبحث في توظيف الذكاء الاصطناعي في الإدارة التعليمية.</p>
+        <div class="loc rv">ينبع، المملكة العربية السعودية</div>
+        <div class="cta rv">
+          <a class="btn btn-p" href="#contact">تواصل معي</a>
+          <a class="btn btn-t" href="cv.html">السيرة الذاتية <span class="ch">‹</span></a>
+        </div>
+      </div>
+      <div class="hph rv"><img src="portrait.png" alt="حاتم السفياني" width="780" height="1341" fetchpriority="high"></div>
     </div>
-  </section>
-
-  <section class="statement">
-    <p class="rv">تسع سنوات في وزارة التعليم. بحث دكتوراه في الذكاء الاصطناعي الوكيل. ومنتجات صُمّمت للمعلّم السعودي.</p>
   </section>
 
   <section class="sec soft about" id="about">
     <div class="wrap">
       <div class="kicker rv">نبذة</div>
-      <h2 class="h2 rv">أبني من داخل المنظومة.</h2>
+      <h2 class="h2 rv">تعليم وتقنية وبحث.</h2>
       <div class="atext">
-        <p class="rv">أعمل منذ تسع سنوات في وزارة التعليم، قريباً من واقع المدارس اليومي. ومن هذا الموقع تتشكّل الأسئلة التي أبحثها، والمنتجات التي أبنيها.</p>
-        <p class="rv">أصمّم وأبني منتجات تقنية تعليمية مثل «شواهد»، وأُعدّ رسالة الدكتوراه في جامعة الملك خالد حول متطلبات توظيف الذكاء الاصطناعي الوكيل في الإدارة التعليمية. أحمل ماجستير التعلّم الإلكتروني وبكالوريوس إدارة الأعمال، وثلاث شهادات مهنية احترافية بالمستوى المتقدم من المركز الوطني للتعليم الإلكتروني.</p>
+        <p class="rv">أعمل في وزارة التعليم منذ تسع سنوات، وأصمّم وأطوّر منتجات تقنية تعليمية، أبرزها «شواهد»، منصّة مجانية للمعلّمين في المملكة.</p>
+        <p class="rv">باحث دكتوراه في الإدارة والإشراف التربوي بجامعة الملك خالد، أبحث في توظيف الذكاء الاصطناعي الوكيل في الإدارة التعليمية. أحمل ماجستير التعلّم الإلكتروني وبكالوريوس إدارة الأعمال.</p>
       </div>
     </div>
-    <img class="about-photo rv" src="portrait.png" alt="حاتم السفياني" width="780" height="1341">
   </section>
 
   <section class="sec" id="work">
     <div class="wrap">
-      <div class="kicker rv">أعمال مختارة</div>
-      <h2 class="h2 rv">صُنعت لمدارس حقيقية.</h2>
+      <div class="kicker rv">الأعمال</div>
+      <h2 class="h2 rv">مشاريع مختارة.</h2>
       <div class="work-list">
-        <div class="row rv"><div class="t"><a href="https://free.shawahid.sa" target="_blank" rel="noopener">شواهد</a></div><div class="tag">مؤسّس</div><div class="d">منصّة عربية مجانية تساعد المعلّم السعودي على إدارة فصله وتحفيز طلابه وتوثيق شواهد تقييم أدائه السنوي، وتضم مركز أدوات فيه 228 نموذج شاهد و433 خطة توزيع منهج، ومنصّة ويب، وتطبيق «شواهد المعلّم» على iOS.</div></div>
-        <div class="row rv"><div class="t">تواصل ينبع</div><div class="tag">تصميم وتطوير</div><div class="d">منصّة تواصل تجمع لمنسوبي المدرسة جداول الإشراف، وتنبيهات الغياب والتأخّر، ورسائل واتساب، وتتبّع حالات التوجيه الطلابي في مكان واحد.</div></div>
-        <div class="row rv"><div class="t">ثانوية ينبع: الأدوات والخدمات</div><div class="tag">تصميم وتطوير</div><div class="d">بوابة مدرسية تجمع أدوات الشواهد والخدمات للمعلّمين والطلاب.</div></div>
+        <div class="row rv"><div class="t"><a href="https://free.shawahid.sa" target="_blank" rel="noopener">شواهد</a></div><div class="tag">مؤسّس</div><div class="d">منصّة عربية مجانية تساعد المعلّمين على إدارة فصولهم وتوثيق شواهد الأداء، وتضم مركز أدوات فيه 228 نموذج شاهد و433 خطة توزيع منهج، ومنصّة ويب، وتطبيقاً على iOS.</div></div>
+        <div class="row rv"><div class="t">تواصل ينبع</div><div class="tag">تصميم وتطوير</div><div class="d">منصّة تواصل لمنسوبي المدرسة: جداول الإشراف، وتنبيهات الغياب والتأخّر، ورسائل واتساب، وحالات التوجيه الطلابي.</div></div>
+        <div class="row rv"><div class="t">ثانوية ينبع: الأدوات والخدمات</div><div class="tag">تصميم وتطوير</div><div class="d">بوابة مدرسية لأدوات الشواهد والخدمات.</div></div>
       </div>
     </div>
   </section>
@@ -230,11 +244,11 @@
   <section class="sec soft" id="focus">
     <div class="wrap" style="text-align:center">
       <div class="kicker rv">مجال العمل</div>
-      <h2 class="h2 rv" style="margin-inline:auto">حيث يلتقي البحث بالمنتج وتصميم التعلّم.</h2>
+      <h2 class="h2 rv" style="margin-inline:auto">البحث، والمنتجات، والتدريب.</h2>
       <div class="cards">
-        <div class="card rv"><h3>الذكاء الاصطناعي في الإدارة التعليمية</h3><p>بحث دكتوراه في جاهزية إدارات التعليم السعودية لتبنّي الذكاء الاصطناعي الوكيل، وحوكمته، وتوظيفه بمسؤولية.</p></div>
-        <div class="card rv"><h3>منتجات التقنية التعليمية</h3><p>منتجات ويب وiOS بالعربية أولاً، أصمّمها وأبنيها من الفكرة حتى الإطلاق باستخدام Next.js وSupabase وSwiftUI.</p></div>
-        <div class="card rv"><h3>تصميم التعلّم والتدريب</h3><p>التصميم التعليمي، وضمان جودة التعلّم الإلكتروني، وتدريب تطبيقي للتربويين.</p></div>
+        <div class="card rv"><h3>الذكاء الاصطناعي في الإدارة التعليمية</h3><p>البحث في توظيف الذكاء الاصطناعي الوكيل في إدارات التعليم.</p></div>
+        <div class="card rv"><h3>منتجات التقنية التعليمية</h3><p>تصميم وتطوير منتجات ويب وiOS باللغة العربية.</p></div>
+        <div class="card rv"><h3>تصميم التعلّم والتدريب</h3><p>التصميم التعليمي، وجودة التعلّم الإلكتروني، والتدريب.</p></div>
       </div>
       <div class="chips rv">
         <a class="chip" href="#research"><b>دكتوراه</b> (قيد الإنجاز) · الإدارة التعليمية</a>
@@ -248,7 +262,7 @@
   <section class="sec" id="credentials">
     <div class="wrap">
       <div class="kicker rv">الشهادات</div>
-      <h2 class="h2 rv">معتمد في تقديم التعلّم الإلكتروني وتصميمه وضبط جودته.</h2>
+      <h2 class="h2 rv">شهادات مهنية.</h2>
       <div class="cred-list">
         <div class="cred rv"><div class="ct">تقديم التعليم والتدريب الإلكتروني <bdi dir='ltr' class='nw'>(OTT-A)</bdi></div><a class="vlink" href="https://ce.nelc.gov.sa/storage/pdf/otta/pc23N25DRE6QLK-ar-1683497890.pdf" target="_blank" rel="noopener">عرض الشهادة <span class="ch">‹</span></a><div class="cm">شهادة مهنية احترافية بالمستوى المتقدم من المركز الوطني للتعليم الإلكتروني. صدرت في مايو 2023، وصالحة حتى مايو 2027.</div><div class="cid">رقم الشهادة <bdi>pc23N25DRE6QLK</bdi></div></div>
         <div class="cred rv"><div class="ct">تصميم خبرات التعليم الإلكتروني <bdi dir='ltr' class='nw'>(eLXD-A)</bdi></div><a class="vlink" href="https://ce.nelc.gov.sa/storage/pdf/elxda/pc2301XP6WRQ4K-ar-1683495524.pdf" target="_blank" rel="noopener">عرض الشهادة <span class="ch">‹</span></a><div class="cm">شهادة مهنية احترافية بالمستوى المتقدم من المركز الوطني للتعليم الإلكتروني. صدرت في مايو 2023، وصالحة حتى مايو 2027.</div><div class="cid">رقم الشهادة <bdi>pc2301XP6WRQ4K</bdi></div></div>
@@ -293,20 +307,19 @@
   <section class="sec soft research" id="research">
     <div class="wrap">
       <div class="kicker rv">البحث العلمي</div>
-      <h2 class="h2 rv">ما الذي تحتاجه إدارات التعليم لتوظيف الذكاء الاصطناعي الوكيل؟</h2>
+      <h2 class="h2 rv">رسالة الدكتوراه.</h2>
       <article class="diss rv">
-        <div class="dl">رسالة الدكتوراه</div>
         <h3 class="dt">متطلبات توظيف الذكاء الاصطناعي الوكيل في تطوير العمل الإداري بإدارات التعليم العام في المملكة العربية السعودية</h3>
-        <p class="ds">لا يكتفي الذكاء الاصطناعي الوكيل بالإجابة عن الأسئلة، بل يخطّط وينفّذ مهامّ متعددة الخطوات باستقلالية. تحدّد دراستي ما تحتاجه إدارات التعليم في المملكة لتوظيفه في العمل الإداري بمسؤولية، انطلاقاً من أدبيات الجاهزية التنظيمية، عبر ستة أبعاد للمتطلبات، بما يساعد صنّاع القرار على تبنّيه بثقة.</p>
+        <p class="ds">تتناول الدراسة متطلبات توظيف الذكاء الاصطناعي الوكيل، وهو أنظمة قادرة على التخطيط وتنفيذ المهام باستقلالية، في العمل الإداري بإدارات التعليم في المملكة، وذلك في ستة أبعاد:</p>
         <ul class="dims"><li>القيادية</li><li>التنظيمية</li><li>البشرية</li><li>التقنية</li><li>الأخلاقية</li><li>التشريعية</li></ul>
-        <div class="dm">دكتوراه الفلسفة في الإدارة والإشراف التربوي، جامعة الملك خالد. قيد الإنجاز.</div>
+        <div class="dm">جامعة الملك خالد، كلية التربية. قيد الإنجاز.</div>
       </article>
     </div>
   </section>
 
   <section class="contact" id="contact">
-    <h2 class="rv">تعمل على الذكاء الاصطناعي في التعليم؟ لنتحدّث.</h2>
-    <p class="sub rv">أرحّب بالتعاون البحثي، والشراكات في التقنية التعليمية، وتدريب التربويين.</p>
+    <h2 class="rv">تواصل معي.</h2>
+    <p class="sub rv">للتعاون البحثي أو الشراكات أو التدريب.</p>
     <div class="cta rv">
       <a class="btn btn-p" href="mailto:hello@hatim.sa">hello@hatim.sa</a>
       <a class="btn btn-t" href="https://www.linkedin.com/in/hatim-alsufyani/" target="_blank" rel="noopener">لينكدإن <span class="ch">‹</span></a>
