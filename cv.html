@@ -7,15 +7,17 @@
 <meta name="description" content="Curriculum vitae of Hatim Alsufyani — Educational Leadership, EdTech and AI in Education.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
+  @font-face{font-family:"Tajarib";src:url("fonts/tajarib/Tajarib-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Tajarib";src:url("fonts/tajarib/Tajarib-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Tajarib";src:url("fonts/tajarib/Tajarib-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"TajaribDisp";src:url("fonts/tajarib/TajaribDisp-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
   :root{
     --bg:#ffffff;--soft:#f5f5f7;--ink:#1d1d1f;--sub:#6e6e73;
     --line:rgba(0,0,0,.10);--accent:#0071e3;
-    --sys:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",system-ui,sans-serif;
-    --ar:"Tajawal",var(--sys);
+    --sys:"Tajarib","Tajawal",-apple-system,system-ui,sans-serif;
+    --disp:"TajaribDisp","Tajarib",system-ui,sans-serif;
+    --ar:var(--sys);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{-webkit-text-size-adjust:100%}
@@ -31,7 +33,7 @@
   .print:active{transform:scale(.97)}
   .print:hover{border-color:var(--ink)}
   .page{max-width:820px;margin:0 auto;padding:56px 24px 90px}
-  header.cv h1{font-size:clamp(2.2rem,6vw,3.2rem);font-weight:700;letter-spacing:-.03em;line-height:1.04}
+  header.cv h1{font-family:var(--disp);font-feature-settings:'liga','dlig','ss01';font-size:clamp(2.2rem,6vw,3.2rem);font-weight:700;letter-spacing:-.03em;line-height:1.04}
   header.cv .role{font-size:1.3rem;color:var(--accent);font-weight:500;margin-top:6px;letter-spacing:-.01em}
   header.cv .contact{margin-top:18px;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--sub)}
   section.blk{margin-top:52px}
@@ -64,6 +66,17 @@
     .chip{background:#f0f0f0}
     .page{padding:24px}
   }
+  .cert .t{font-size:1.12rem}
+  .nw{white-space:nowrap}
+  .cert .row{display:grid;grid-template-columns:1fr auto;gap:4px 20px;align-items:baseline}
+  @media(max-width:560px){ .cert .row{grid-template-columns:1fr} }
+  .cert .org a{color:inherit}
+  .cv-courses{columns:2;column-gap:36px;list-style:none;margin-top:6px}
+  .cv-courses li{break-inside:avoid;padding:9px 0;border-top:1px solid var(--line);font-size:.98rem;letter-spacing:-.01em}
+  .cv-courses li span{display:block;font-size:13px;color:var(--sub)}
+  .note{color:var(--sub);font-size:1.02rem;margin-bottom:12px}
+  @media(max-width:640px){ .cv-courses{columns:1} }
+  @media print{ .cv-courses li span,.note{color:#333} .cert .org a{color:#0a5bb5} }
 </style>
 </head>
 <body>
@@ -128,11 +141,43 @@
 
   <section class="blk">
     <div class="h">Certifications</div>
-    <div class="chips">
-      <span class="chip">Online Teaching / Training — Advanced (OTT-A)</span>
-      <span class="chip">eLearning Experience Design — Advanced (eLXD-A)</span>
-      <span class="chip">eLearning Quality Assurance — Advanced (eLQA-A)</span>
+    <div class="item cert">
+      <div class="row"><span class="t">Professional Certificate in Online Teaching / Training, Advanced Level <span class="nw">(OTT-A)</span></span><span class="when">May 2023 – May 2027</span></div>
+      <div class="org">National eLearning Center, credential ID <a href="https://ce.nelc.gov.sa/storage/pdf/otta/pc23N25DRE6QLK-ar-1683497890.pdf" target="_blank" rel="noopener">pc23N25DRE6QLK</a></div>
     </div>
+    <div class="item cert">
+      <div class="row"><span class="t">Professional Certificate in eLearning Experience Design, Advanced Level <span class="nw">(eLXD-A)</span></span><span class="when">May 2023 – May 2027</span></div>
+      <div class="org">National eLearning Center, credential ID <a href="https://ce.nelc.gov.sa/storage/pdf/elxda/pc2301XP6WRQ4K-ar-1683495524.pdf" target="_blank" rel="noopener">pc2301XP6WRQ4K</a></div>
+    </div>
+    <div class="item cert">
+      <div class="row"><span class="t">Professional Certificate in eLearning Quality Assurance, Advanced Level <span class="nw">(eLQA-A)</span></span><span class="when">May 2023 – May 2027</span></div>
+      <div class="org">National eLearning Center, credential ID <a href="https://ce.nelc.gov.sa/storage/pdf/elqaa/pc23KE5LN6EQ0L-ar-1683494282.pdf" target="_blank" rel="noopener">pc23KE5LN6EQ0L</a></div>
+    </div>
+    <div class="item cert">
+      <div class="row"><span class="t">Essential Skills for Educational Leaders (80 professional-development hours)</span><span class="when">Sep 2023</span></div>
+      <div class="org">National Institute for Educational Professional Development, credential ID <a href="https://ce.nelc.gov.sa/storage/pdf/niepd2/FX2316QGKN9654-ar-1695105365.pdf" target="_blank" rel="noopener">FX2316QGKN9654</a></div>
+    </div>
+  </section>
+
+  <section class="blk">
+    <div class="h">Courses</div>
+    <p class="note">14 Coursera courses completed through FutureX, the national e-learning platform. 79 hours in total.</p>
+    <ul class="cv-courses">
+      <li>Agentic AI and AI Agents: A Primer for Leaders<span>Vanderbilt University, 6h 16m</span></li>
+      <li>Agile Leadership: Introduction to Change<span>University of Colorado System, 9h 17m</span></li>
+      <li>Managing as a Coach<span>University of California, Davis, 11h 10m</span></li>
+      <li>Giving Helpful Feedback<span>University of Colorado Boulder, 5h 15m</span></li>
+      <li>Initiating and Planning Projects<span>University of California, Irvine, 4h 27m</span></li>
+      <li>Effective Problem-Solving and Decision-Making<span>University of California, Irvine, 8h 16m</span></li>
+      <li>Solving Problems with Creative and Critical Thinking<span>IBM, 3h 1m</span></li>
+      <li>Work Smarter, Not Harder: Time Management for Personal &amp; Professional Productivity<span>University of California, Irvine, 9h 24m</span></li>
+      <li>Delivering Quality Work with Agility<span>IBM, 1h 19m</span></li>
+      <li>Communication in the 21st Century Workplace<span>University of California, Irvine, 10h 23m</span></li>
+      <li>Collaborate Effectively for Professional Success<span>IBM, 2h 20m</span></li>
+      <li>Developing Interpersonal Skills<span>IBM, 3h 16m</span></li>
+      <li>Present with Purpose: Create/Deliver Effective Presentations<span>IBM, 2h 28m</span></li>
+      <li>People and Soft Skills Assessment<span>IBM, 2h 23m</span></li>
+    </ul>
   </section>
 
   <section class="blk skills">
