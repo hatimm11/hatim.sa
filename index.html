@@ -8,10 +8,17 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
+  @font-face{font-family:"Tajarib";src:url("fonts/tajarib/Tajarib-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+  @font-face{font-family:"Tajarib";src:url("fonts/tajarib/Tajarib-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+  @font-face{font-family:"Tajarib";src:url("fonts/tajarib/Tajarib-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"Tajarib";src:url("fonts/tajarib/Tajarib-Black.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
+  @font-face{font-family:"TajaribDisp";src:url("fonts/tajarib/TajaribDisp-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+  @font-face{font-family:"TajaribDisp";src:url("fonts/tajarib/TajaribDisp-Black.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
   :root{
     --bg:#ffffff; --soft:#f5f5f7; --ink:#1d1d1f; --sub:#6e6e73;
     --line:rgba(0,0,0,.10); --accent:#0071e3; --accent-2:#0077ED;
-    --sys:"Tajawal",-apple-system,BlinkMacSystemFont,"Helvetica Neue",system-ui,sans-serif;
+    --sys:"Tajarib","Tajawal",-apple-system,system-ui,sans-serif;
+    --disp:"TajaribDisp","Tajarib",system-ui,sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
@@ -24,7 +31,7 @@
   header.scrolled{border-bottom-color:var(--line)}
   .bar{max-width:1000px;margin:0 auto;padding:0 24px;height:48px;display:flex;align-items:center;justify-content:space-between}
   .brand{display:flex;align-items:center;gap:9px;font-size:17px;font-weight:600;letter-spacing:-.01em}
-  .mk{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:7px;background:var(--ink);color:#fff;font-family:"Tajawal",var(--sys);font-size:15px;font-weight:700}
+  .mk{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:7px;background:var(--ink);color:#fff;font-family:var(--sys);font-size:15px;font-weight:700}
   nav{display:flex;gap:28px;font-size:13px;color:var(--sub);align-items:center}
   nav a{transition:color .25s}
   nav a:hover{color:var(--ink)}
@@ -33,7 +40,7 @@
 
   .hero{min-height:94svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:118px 24px 80px}
   .eyebrow{font-size:19px;font-weight:600;color:var(--accent);letter-spacing:-.01em}
-  .hero h1{font-size:clamp(3rem,9vw,6.5rem);font-weight:700;line-height:1.03;letter-spacing:-.03em;margin:14px 0 0;max-width:14ch}
+  .hero h1{font-family:var(--disp);font-feature-settings:'liga','dlig','ss01';font-size:clamp(3rem,9vw,6.5rem);font-weight:700;line-height:1.03;letter-spacing:-.03em;margin:14px 0 0;max-width:14ch}
   .hero .loc{font-size:1.05rem;color:var(--sub);margin-top:18px;letter-spacing:-.01em}
   .hero p{font-size:clamp(1.15rem,2.2vw,1.5rem);color:var(--sub);max-width:34ch;margin:22px auto 0;line-height:1.38;letter-spacing:-.01em}
   .cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
@@ -54,7 +61,7 @@
   .soft{background:var(--soft)}
   .sec{padding:110px 0}
   .kicker{font-size:21px;font-weight:600;color:var(--sub);letter-spacing:-.01em;margin-bottom:8px}
-  .h2{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;letter-spacing:-.025em;line-height:1.08;max-width:16ch}
+  .h2{font-family:var(--disp);font-feature-settings:'liga','dlig','ss01';font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;letter-spacing:-.025em;line-height:1.08;max-width:16ch}
 
   .about-grid{margin-top:40px;display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:center}
   .about-grid .photo{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.08)}
@@ -80,7 +87,7 @@
   .chip b{color:var(--accent);font-weight:600}
 
   .contact{text-align:center;padding:130px 24px}
-  .contact h2{font-size:clamp(2.4rem,6.5vw,4.5rem);font-weight:700;letter-spacing:-.03em;line-height:1.05}
+  .contact h2{font-family:var(--disp);font-feature-settings:'liga','dlig','ss01';font-size:clamp(2.4rem,6.5vw,4.5rem);font-weight:700;letter-spacing:-.03em;line-height:1.05}
   .contact .cta{margin-top:34px}
 
   footer{border-top:1px solid var(--line);background:var(--soft)}
@@ -103,8 +110,6 @@
   @media(min-width:821px){ .about .wrap{padding-inline-end:clamp(300px,34%,380px)} }
   @media(max-width:820px){ .about-photo{position:static;margin:24px auto 0;width:min(270px,66vw)} }
 </style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header id="hd">
