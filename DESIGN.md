@@ -9,7 +9,7 @@ This file is the single source of truth for visual and interaction design. Read 
 
 ## 0. How styles are organised
 
-- **No build step.** The pages retain their base `<style>` blocks. `site.css` and `site.js` provide shared responsive components, native disclosure behavior and progressive enhancement. CV pages also use `cv-extra.css`.
+- **No build step.** The pages retain their base `<style>` blocks. `site.css` and `site.js` provide shared responsive components, native disclosure behavior and progressive enhancement. All four pages load `typography.css` for consistent Arabic shaping. CV pages also use `cv-extra.css`.
 - **Every design change must be applied to both `index.html` (EN, LTR) and `ar.html` (AR, RTL)**, and to `cv.html` / `cv-ar.html` when relevant.
 - Arabic base styles live in `ar.html`; shared components use `[dir=rtl]` in `site.css`. See §3 for line heights, weights and tracking.
 - Keep this file in sync with the code. If you change a value, update the matching table here in the same commit.
@@ -86,7 +86,7 @@ All faces load with `font-display:swap`.
 
 ### OpenType rules (important)
 
-- **Headings:** `font-feature-settings:'liga','ss01'`. `ss01` enables the long and elongated final forms, including the long meem in «حاتم».
+- **All Arabic text:** `typography.css` enables `liga`, `calt` and `ss01`, with `dlig` explicitly off. This applies to paragraphs, headings, navigation, buttons and both CVs. `ss01` uses Tajarib's native elongated final forms; do not insert decorative tatweel characters or justify text by stretching letters. Arabic tracking stays zero, including nested labels; language tags scope the rules correctly in English pages.
 - **Never enable `dlig`.** It swaps meem and heh for decorative forms that were explicitly rejected. Medial heh must stay in its normal form.
 - **Wordmark** `.brand .wm`: `font-feature-settings:'ss01'` only.
 
@@ -263,7 +263,7 @@ These follow the same Apple guidance:
 
 **Contact actions and mail options**
 - One blue email capsule, with the address and a separate native `details.mail-options` disclosure inside it. The address opens `mailto:` directly.
-- Contact controls have a minimum height of 52px, use the normal 16px button type, and a 14px gap. They stack below 480px.
+- Contact controls have a minimum height of 52px, use the normal 16px button type, and a 14px gap. They stack below 480px. In Arabic, the invitation is split after «والفرص» so «التي يمكن أن أضيف إليها بخبرتي.» starts a separate line.
 - LinkedIn is a blue `.btn.btn-t` text link with the supplied 24px brand icon and the normal text chevron. It has no border or separate filled background.
 - `.mail-panel` opens under the email action. It is white, radius 16px, with the floating shadow. Inner items use radius 10px and at least a 44px touch target.
 - Actions: Copy address, Open in Gmail, Open in Outlook. Items use `--soft` on hover. Copy status uses `--sub`.
@@ -333,7 +333,7 @@ These follow the same Apple guidance:
 
 - [ ] The change is applied to both `index.html` and `ar.html` (and `cv.html` if relevant).
 - [ ] Only the tokens in §2 are used. No new colours, radii or easing curves.
-- [ ] Headings use `--disp` + `'liga','ss01'`, and there is no `dlig` anywhere.
+- [ ] Headings use `--disp` + `'liga','ss01'`, and `dlig` stays disabled throughout.
 - [ ] Checked at 1280px, 390px and 340px wide, in both languages. No horizontal scroll.
 - [ ] Arabic: RTL correct, no letter-spacing, Latin wrapped in `<bdi dir="ltr">`.
 - [ ] Contrast meets AA. Focus is visible. Reduced motion and transparency still work.

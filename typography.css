@@ -1,0 +1,5 @@
+/* Arabic shaping uses Tajarib's native elongated forms, never inserted tatweels. */
+:lang(ar){font-feature-settings:"liga" 1,"calt" 1,"ss01" 1,"dlig" 0;font-kerning:normal;font-variant-ligatures:common-ligatures contextual no-discretionary-ligatures;letter-spacing:0!important}
+/* Keep the established display headings and wordmark consistent across all pages. */
+:lang(ar) :is(h1,h2,h3,h4,h5,h6){font-feature-settings:"liga" 1,"calt" 1,"ss01" 1,"dlig" 0}
+.brand .wm{font-feature-settings:"ss01" 1}
