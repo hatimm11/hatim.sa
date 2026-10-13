@@ -206,6 +206,18 @@
   .train .trn{margin-top:22px;font-size:1.02rem;color:var(--sub)}
   .train .trn b{color:var(--ink)}
   @media(max-width:820px){ .tl{grid-template-columns:1fr} }
+
+  .tg{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:34px 36px}
+  .tg h4{font-size:15px;font-weight:600;padding-bottom:12px;border-bottom:1px solid var(--ink)}
+  .tg ul{list-style:none}
+  .tg li{padding:12px 0;border-bottom:1px solid var(--line)}
+  .tg .tn{display:block;font-size:15px;font-weight:500;line-height:1.4}
+  .tg .tm{display:flex;justify-content:space-between;gap:10px;margin-top:3px;font-size:12.5px;color:var(--sub)}
+  .tg .tm b{font-weight:400;white-space:nowrap}
+  .tg .sks{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .tg .sk{background:var(--soft);border-radius:980px;padding:2px 9px;font-size:11.5px;line-height:1.6}
+  @media(max-width:980px){ .tg{grid-template-columns:repeat(2,1fr)} }
+  @media(max-width:640px){ .tg{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
@@ -294,19 +306,48 @@
       </div>
       <div class="train rv">
         <h3>التدريب والتطوير المهني</h3>
-        <p>47 برنامجاً تدريبياً منذ 2018 بأكثر من 340 ساعة، مع وزارة التعليم، والمعهد الوطني للتطوير المهني التعليمي، والمركز الوطني للتعليم الإلكتروني، وجامعة الملك عبدالعزيز. من أبرزها:</p>
-        <ul class="tl">
-          <li><span>الكفايات المهنية لمعلم المعرفة المالية</span><em>برنامج المدربين المركزيين، 40 ساعة</em></li>
-          <li><span>الكفايات المهنية لمعلم مقرر الإدارة المالية</span><em>16 ساعة</em></li>
-          <li><span>الكفايات المهنية لمعلم مقرر صناعة القرار في الأعمال</span><em>15 ساعة</em></li>
-          <li><span>التعليم الإلكتروني</span><em>جامعة جازان، 12 ساعة</em></li>
-          <li><span>توظيف Class Notebook في التعليم المدمج</span><em>10 ساعات</em></li>
-          <li><span>التصميم الاحترافي ببرنامج Adobe Illustrator</span><em>10 ساعات</em></li>
-          <li><span>البحوث النوعية في التعليم</span><em>8 ساعات</em></li>
-          <li><span>الإدارة المرنة وفق منهجية Agile</span><em>6 ساعات</em></li>
-          <li><span>نافذة إلى الذكاء الاصطناعي: أساسيات التعلم العميق</span><em>العطاء الرقمي، 5 ساعات</em></li>
-          <li><span>الأمن السيبراني (Cisco)</span><em>4 ساعات</em></li>
-        </ul>
+        <p>61 برنامجاً ودورة منذ 2018 بأكثر من 420 ساعة، مع وزارة التعليم، والمعهد الوطني للتطوير المهني التعليمي، والمركز الوطني للتعليم الإلكتروني، وجامعة الملك عبدالعزيز، وجامعات عالمية عبر منصة FutureX. من أبرزها:</p>
+        <div class="tg">
+          <div><h4>القيادة والإدارة</h4>
+          <ul>
+            <li><span class="tn"><bdi dir="ltr">Agentic AI and AI Agents: A Primer for Leaders</bdi></span><span class="tm"><span>جامعة فاندربيلت</span><b>6 ساعات</b></span><span class="sks"><span class="sk">القيادة</span><span class="sk">الابتكار</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">Agile Leadership: Introduction to Change</bdi></span><span class="tm"><span>جامعة كولورادو</span><b>9 ساعات</b></span><span class="sks"><span class="sk">القيادة الرشيقة</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">Managing as a Coach</bdi></span><span class="tm"><span>جامعة كاليفورنيا، ديفيس</span><b>11 ساعة</b></span><span class="sks"><span class="sk">القيادة</span><span class="sk">الإدارة</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">Giving Helpful Feedback</bdi></span><span class="tm"><span>جامعة كولورادو بولدر</span><b>5 ساعات</b></span><span class="sks"><span class="sk">العمل الجماعي</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">Initiating and Planning Projects</bdi></span><span class="tm"><span>جامعة كاليفورنيا، إرفاين</span><b>4 ساعات</b></span><span class="sks"><span class="sk">إدارة المشاريع</span><span class="sk">التخطيط</span></span></li>
+            <li><span class="tn">الإدارة المرنة وفق منهجية Agile</span><span class="tm"><span>إدارة تعليم ينبع</span><b>6 ساعات</b></span></li>
+          </ul></div>
+          <div><h4>التعليم المالي</h4>
+          <ul>
+            <li><span class="tn">الكفايات المهنية لمعلم المعرفة المالية</span><span class="tm"><span>برنامج المدربين المركزيين</span><b>40 ساعة</b></span></li>
+            <li><span class="tn">الكفايات المهنية لمعلم مقرر الإدارة المالية</span><span class="tm"><span>وزارة التعليم</span><b>16 ساعة</b></span></li>
+            <li><span class="tn">الكفايات المهنية لمعلم مقرر صناعة القرار في الأعمال</span><span class="tm"><span>إدارة تعليم ينبع</span><b>15 ساعة</b></span></li>
+          </ul></div>
+          <div><h4>التعلّم الإلكتروني والتقنية</h4>
+          <ul>
+            <li><span class="tn">التعليم الإلكتروني</span><span class="tm"><span>جامعة جازان</span><b>12 ساعة</b></span></li>
+            <li><span class="tn">توظيف Class Notebook في التعليم المدمج</span><span class="tm"><span>إدارة تعليم ينبع</span><b>10 ساعات</b></span></li>
+            <li><span class="tn">التصميم الاحترافي ببرنامج Adobe Illustrator</span><span class="tm"><span>إدارة تعليم ينبع</span><b>10 ساعات</b></span></li>
+            <li><span class="tn">نافذة إلى الذكاء الاصطناعي: أساسيات التعلم العميق</span><span class="tm"><span>العطاء الرقمي</span><b>5 ساعات</b></span></li>
+            <li><span class="tn">الأمن السيبراني (Cisco)</span><span class="tm"><span>المعهد الوطني للتطوير المهني التعليمي</span><b>4 ساعات</b></span></li>
+          </ul></div>
+          <div><h4>البحث وحل المشكلات</h4>
+          <ul>
+            <li><span class="tn">البحوث النوعية في التعليم</span><span class="tm"><span>المعهد الوطني للتطوير المهني التعليمي</span><b>8 ساعات</b></span></li>
+            <li><span class="tn"><bdi dir="ltr">Effective Problem-Solving and Decision-Making</bdi></span><span class="tm"><span>جامعة كاليفورنيا، إرفاين</span><b>8 ساعات</b></span></li>
+            <li><span class="tn"><bdi dir="ltr">Solving Problems with Creative and Critical Thinking</bdi></span><span class="tm"><span>IBM</span><b>3 ساعات</b></span><span class="sks"><span class="sk">التفكير النقدي</span><span class="sk">التفكير الإبداعي</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">Work Smarter, Not Harder: Time Management</bdi></span><span class="tm"><span>جامعة كاليفورنيا، إرفاين</span><b>9 ساعات</b></span><span class="sks"><span class="sk">إدارة الوقت</span><span class="sk">تحديد الأولويات</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">Delivering Quality Work with Agility</bdi></span><span class="tm"><span>IBM</span><b>ساعة واحدة</b></span><span class="sks"><span class="sk">رشاقة</span></span></li>
+          </ul></div>
+          <div><h4>التواصل والعمل الجماعي</h4>
+          <ul>
+            <li><span class="tn"><bdi dir="ltr">Communication in the 21st Century Workplace</bdi></span><span class="tm"><span>جامعة كاليفورنيا، إرفاين</span><b>10 ساعات</b></span><span class="sks"><span class="sk">استراتيجيات الاتصال</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">Collaborate Effectively for Professional Success</bdi></span><span class="tm"><span>IBM</span><b>ساعتان</b></span><span class="sks"><span class="sk">العمل الجماعي</span><span class="sk">تعاون</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">Developing Interpersonal Skills</bdi></span><span class="tm"><span>IBM</span><b>3 ساعات</b></span></li>
+            <li><span class="tn"><bdi dir="ltr">Present with Purpose: Create and Deliver Effective Presentations</bdi></span><span class="tm"><span>IBM</span><b>ساعتان</b></span><span class="sks"><span class="sk">لغة الجسد</span><span class="sk">تقديم العروض</span></span></li>
+            <li><span class="tn"><bdi dir="ltr">People and Soft Skills Assessment</bdi></span><span class="tm"><span>IBM</span><b>ساعتان</b></span><span class="sks"><span class="sk">تقديم العروض</span><span class="sk">حل المشكلات</span></span></li>
+          </ul></div>
+        </div>
         <p class="trn"><b>مدرّباً:</b> برامج الإدارة المالية والمعرفة المالية، وأكثر من 250 ساعة تدريبية معتمدة من المؤسسة العامة للتدريب التقني والمهني.</p>
       </div>
     </div>
