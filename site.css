@@ -128,3 +128,8 @@ nav a,.lang,.btn,.btn-t .ch,.row .t a,a.chip{transition-timing-function:var(--ea
 [dir=rtl] .train h3,[dir=rtl] .subh,[dir=rtl] .additional-training h4{letter-spacing:0}
 @media(max-width:480px){.contact{padding-inline:20px}}
 @media(prefers-reduced-motion:reduce){.btn:active,[dir=rtl] .btn-t:hover .ch,.btn-t:hover .ch,.email-action:has(>.email-address:active,>.mail-options>summary:active){transform:none}.row:hover{padding-inline-start:4px}.mail-chevron,:is(.project-details,.coursework,.training-more,.dissertation-title)>summary::after{transition:none}}
+
+/* Original portrait, with responsive delivery and a nondestructive white-point adjustment. */
+.hero .hph{aspect-ratio:4/5;overflow:hidden}
+.hph picture{display:block;width:100%;height:100%}
+.hero .hph img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(1.025)}

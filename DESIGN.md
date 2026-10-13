@@ -286,9 +286,12 @@ These follow the same Apple guidance:
 
 ## 9. Imagery & iconography
 
-- **Portrait** `portrait.png` (transparent cutout, 780×1341):
-  - **Desktop:** an end-side column (240–340px) aligned to the bottom of the hero.
-  - **Mobile:** above the text, `width:min(230px,62vw)`, `aspect-ratio:4/5`, cropped from the top, bottom fade `mask-image:linear-gradient(#000 78%,transparent)`.
+- **Portrait:** use the owner's supplied photograph, with facial details and pose preserved. The source GIF stays unchanged outside the repository.
+  - Responsive WebP delivery copies: `portrait-2026-480.webp` (480×720) and `portrait-2026-960.webp` (960×1440); JPEG fallback and sharing image: `portrait-2026.jpg` (960×1440).
+  - **Desktop:** an end-side column (240–340px) aligned to the bottom of the hero, with a 4:5 frame and top-aligned `object-fit:cover` crop.
+  - **Mobile:** above the text, `width:min(230px,62vw)`, the same 4:5 frame and top alignment, with the existing bottom fade `mask-image:linear-gradient(#000 78%,transparent)`.
+  - A small CSS `brightness(1.025)` adjustment blends the photograph's near-white background into the white hero. The image files retain the original photograph; do not use generated facial replacements.
+  - Keep explicit dimensions, responsive `sizes`, and high fetch priority to avoid layout movement and oversized downloads.
 - **No icon library and no emoji.** Arrows are text glyphs (› ‹). The owner-supplied LinkedIn mark (`linkedin-icon.webp`) is the explicit exception for the LinkedIn contact link; preserve its original colors.
 - **Wordmark only:** «حاتم» set in TajaribDisp with `ss01`. No badge or symbol.
 
