@@ -15,7 +15,10 @@
         }
       });
     }, { threshold: 0.01 });
-    document.querySelectorAll('.rv').forEach(element => observer.observe(element));
+    document.querySelectorAll('.rv').forEach((element, index) => {
+      element.style.animationDelay = `${Math.min(index, 4) * 55}ms`;
+      observer.observe(element);
+    });
   }
 
   const menus = document.querySelectorAll('.mobile-menu, .mail-options');
