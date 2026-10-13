@@ -282,10 +282,10 @@ These follow the same Apple guidance:
 
 **Selected professional development** `.selected-training`
 - Six verified university courses appear first, followed by a native disclosure for the remaining catalog; no duplicates or invented qualifications.
-- Each course is a white `.course-card`, with radius 20px, the standard hairline and card shadow. Use 24px padding (20px on mobile), with a 20px grid gap (16px on mobile). Three columns, two at 980px, one at 640px.
+- Each course is a white `.course-card`, with radius 20px, the standard hairline and card shadow. Use 20px vertical / 24px horizontal padding (20px all around on mobile), with a 20px grid gap (16px on mobile). Three columns, two at 980px, one at 640px.
 - The same card component covers the expanded catalog and additional program, grouped under their existing category headings. Keep the strongest six courses first and preserve the native disclosure.
 - Standard course type: title 15px / 500 / 1.4, provider and duration 12.5px, skill tags 11.5px on `--soft`.
-- Heading and metadata areas align within the grid; skill tags sit at the bottom of each card. Titles use the page's language; university names are written in full in featured English cards. On mobile, card heights follow their content.
+- Keep card content compact with an 8px gap between the title, provider/duration and skills. Titles and metadata use their natural height, and skill tags follow directly below; do not use fixed minimum heights or auto margins that spread these elements apart. Grid rows follow their content. Titles use the page's language; university names are written in full in featured English cards.
 
 **Footer**
 - `--soft` background, top hairline, 12.5px `--sub`.
