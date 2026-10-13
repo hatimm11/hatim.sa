@@ -192,6 +192,9 @@
   .mailfb p{font-size:12.5px;color:var(--sub);padding:6px 10px 8px}
   .mailfb a,.mailfb button{display:block;width:100%;text-align:start;font:inherit;font-size:15px;color:var(--ink);background:none;border:0;border-radius:10px;padding:9px 10px;cursor:pointer}
   .mailfb a:hover,.mailfb button:hover{background:var(--soft)}
+
+  .mailfb::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+  @media(hover:hover){ .mailwrap:hover .mailfb,.mailwrap:focus-within .mailfb{display:block} }
 </style>
 </head>
 <body>
@@ -330,7 +333,7 @@
     <h2 class="rv">تواصل معي.</h2>
     <p class="sub rv">للتعاون البحثي أو الشراكات أو التدريب.</p>
     <div class="cta rv">
-      <span class="mailwrap"><a class="btn btn-p" href="mailto:hello@hatim.sa">hello@hatim.sa</a><span class="mailfb" role="dialog"><p>لم يُفتح تطبيق البريد؟</p><button type="button" data-copy="hello@hatim.sa">نسخ العنوان</button><a href="https://mail.google.com/mail/?view=cm&amp;to=hello@hatim.sa" target="_blank" rel="noopener">فتح في Gmail</a><a href="https://outlook.live.com/mail/0/deeplink/compose?to=hello@hatim.sa" target="_blank" rel="noopener">فتح في Outlook</a></span></span>
+      <span class="mailwrap"><a class="btn btn-p" href="mailto:hello@hatim.sa">hello@hatim.sa</a><span class="mailfb" role="menu"><button type="button" data-copy="hello@hatim.sa">نسخ العنوان</button><a href="https://mail.google.com/mail/?view=cm&amp;to=hello@hatim.sa" target="_blank" rel="noopener">فتح في Gmail</a><a href="https://outlook.live.com/mail/0/deeplink/compose?to=hello@hatim.sa" target="_blank" rel="noopener">فتح في Outlook</a></span></span>
       <a class="btn btn-t" href="https://www.linkedin.com/in/hatim-alsufyani/" target="_blank" rel="noopener">لينكدإن <span class="ch">‹</span></a>
     </div>
   </section>
