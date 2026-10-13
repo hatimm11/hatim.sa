@@ -86,7 +86,8 @@ All faces load with `font-display:swap`.
 
 ### OpenType rules (important)
 
-- **All Arabic text:** `typography.css` enables `liga`, `calt` and `ss01`, with `dlig` explicitly off. This applies to paragraphs, headings, navigation, buttons and both CVs. `ss01` uses Tajarib's native elongated final forms; do not insert decorative tatweel characters or justify text by stretching letters. Arabic tracking stays zero, including nested labels; language tags scope the rules correctly in English pages.
+- **Arabic reading text and subheadings:** `typography.css` enables `liga` and `calt`, with `ss01` and `dlig` explicitly off. Paragraphs, project titles, subheadings, navigation, buttons and CV body text use natural, unextended letterforms. Do not insert decorative tatweel characters. Arabic tracking stays zero and word spacing stays normal. Long copy uses start alignment and `text-wrap:pretty`; never justify it by stretching letters. Language tags scope the rules correctly in English pages.
+- **Primary display headings only:** the hero name, large `.h2` section headings, contact heading and CV name retain `ss01`.
 - **Never enable `dlig`.** It swaps meem and heh for decorative forms that were explicitly rejected. Medial heh must stay in its normal form.
 - **Wordmark** `.brand .wm`: `font-feature-settings:'ss01'` only.
 
@@ -261,6 +262,11 @@ These follow the same Apple guidance:
 - `--ink` items at weight 500, separated by grey 4px dots.
 - JS adds `.ls` to the first item on each wrapped line to hide its dot.
 
+**Secondary project previews**
+- Tawasol Yanbu and Yanbu Secondary each use a genuine 1200×800 WebP screenshot of their public landing page. No generated or reconstructed interface.
+- Preserve flat project rows and their hairlines. Place the preview beside the text, at most 300px wide, with radius 20px and no shadow. At 640px and below, place it above the text.
+- Use descriptive alt text, explicit image dimensions and lazy loading. Keep the existing blue visit link.
+
 **Contact actions and mail options**
 - One blue email capsule, with the address and a separate native `details.mail-options` disclosure inside it. The address opens `mailto:` directly.
 - Contact controls have a minimum height of 52px, use the normal 16px button type, and a 14px gap. They stack below 480px. In Arabic, the invitation is split after «والفرص» so «التي يمكن أن أضيف إليها بخبرتي.» starts a separate line.
@@ -333,7 +339,7 @@ These follow the same Apple guidance:
 
 - [ ] The change is applied to both `index.html` and `ar.html` (and `cv.html` if relevant).
 - [ ] Only the tokens in §2 are used. No new colours, radii or easing curves.
-- [ ] Headings use `--disp` + `'liga','ss01'`, and `dlig` stays disabled throughout.
+- [ ] Only primary display headings use `--disp` + `'liga','ss01'`; reading text and subheadings use natural forms, and `dlig` stays disabled throughout.
 - [ ] Checked at 1280px, 390px and 340px wide, in both languages. No horizontal scroll.
 - [ ] Arabic: RTL correct, no letter-spacing, Latin wrapped in `<bdi dir="ltr">`.
 - [ ] Contrast meets AA. Focus is visible. Reduced motion and transparency still work.

@@ -137,5 +137,13 @@ nav a,.lang,.btn,.btn-t .ch,.row .t a,a.chip{transition-timing-function:var(--ea
 .contact .contact-line{display:block}
 .contact .contact-followup{white-space:nowrap}
 .row .project-link{grid-column:1/-1;justify-self:start;padding:8px 0;min-height:44px}
-[dir=rtl] .selected-training .course-heading{min-height:4.2em}
-@media(max-width:640px){[dir=rtl] .selected-training .course-heading{min-height:0}}
+
+/* Secondary projects retain their flat rows with a small, genuine interface preview. */
+.secondary-projects .project-row{grid-template-columns:minmax(0,1fr) minmax(220px,300px);gap:32px;align-items:center}
+.project-summary{min-width:0}
+.project-summary .tag{margin-top:6px;white-space:normal}
+.project-summary .d{margin-top:12px}
+.project-summary .project-link{margin-top:10px}
+.project-thumbnail{margin:0;min-width:0}
+.project-thumbnail img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;background:var(--soft);border:1px solid var(--line);border-radius:20px}
+@media(max-width:640px){.secondary-projects .project-row{grid-template-columns:1fr;gap:20px}.project-thumbnail{order:-1;max-width:440px;width:100%;justify-self:center}}

@@ -1,5 +1,7 @@
-/* Arabic shaping uses Tajarib's native elongated forms, never inserted tatweels. */
-:lang(ar){font-feature-settings:"liga" 1,"calt" 1,"ss01" 1,"dlig" 0;font-kerning:normal;font-variant-ligatures:common-ligatures contextual no-discretionary-ligatures;letter-spacing:0!important}
-/* Keep the established display headings and wordmark consistent across all pages. */
-:lang(ar) :is(h1,h2,h3,h4,h5,h6){font-feature-settings:"liga" 1,"calt" 1,"ss01" 1,"dlig" 0}
+/* Natural Arabic forms for reading text, subheadings and interface labels. */
+:lang(ar){font-feature-settings:"liga" 1,"calt" 1,"ss01" 0,"dlig" 0;font-kerning:normal;font-variant-ligatures:common-ligatures contextual no-discretionary-ligatures;letter-spacing:0!important;word-spacing:normal}
+/* Elongated alternates belong only to the primary display headings and wordmark. */
+:lang(ar) :is(.hero h1,.h2,.contact h2,header.cv h1){font-feature-settings:"liga" 1,"calt" 1,"ss01" 1,"dlig" 0}
 .brand .wm{font-feature-settings:"ss01" 1}
+/* Long copy keeps natural joins and spacing; no forced letter stretching. */
+:lang(ar) :is(.atext p,.project-copy>p,.project-summary .d,.card p,.training-delivered p,.diss .ds,.cred .cm,.train>p,.project-details dd,.lede,.note,.skills p,.item li,.edu .x){text-align:start;text-wrap:pretty;word-spacing:normal}
