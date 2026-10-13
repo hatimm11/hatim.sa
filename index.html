@@ -170,6 +170,14 @@
   }
 
   .brand .wm{font-family:"TajaribDisp","Tajarib",system-ui,sans-serif;font-weight:700;font-size:25px;line-height:1;letter-spacing:0;font-feature-settings:'ss01'}
+
+  .mailwrap{position:relative;display:inline-flex}
+  .mailfb{position:absolute;top:calc(100% + 10px);inset-inline-start:50%;transform:translateX(-50%);z-index:20;background:var(--bg);border:1px solid var(--line);border-radius:16px;box-shadow:0 12px 36px rgba(0,0,0,.12);padding:8px;display:none;min-width:220px;text-align:start}
+  [dir=rtl] .mailfb{transform:translateX(50%)}
+  .mailfb.show{display:block}
+  .mailfb p{font-size:12.5px;color:var(--sub);padding:6px 10px 8px}
+  .mailfb a,.mailfb button{display:block;width:100%;text-align:start;font:inherit;font-size:15px;color:var(--ink);background:none;border:0;border-radius:10px;padding:9px 10px;cursor:pointer}
+  .mailfb a:hover,.mailfb button:hover{background:var(--soft)}
 </style>
 </head>
 <body>
@@ -308,7 +316,7 @@
     <h2 class="rv">Get in touch.</h2>
     <p class="sub rv">For research collaboration, partnerships, or training.</p>
     <div class="cta rv">
-      <a class="btn btn-p" href="mailto:hello@hatim.sa">hello@hatim.sa</a>
+      <span class="mailwrap"><a class="btn btn-p" href="mailto:hello@hatim.sa">hello@hatim.sa</a><span class="mailfb" role="dialog"><p>No email app opened?</p><button type="button" data-copy="hello@hatim.sa">Copy address</button><a href="https://mail.google.com/mail/?view=cm&amp;to=hello@hatim.sa" target="_blank" rel="noopener">Open in Gmail</a><a href="https://outlook.live.com/mail/0/deeplink/compose?to=hello@hatim.sa" target="_blank" rel="noopener">Open in Outlook</a></span></span>
       <a class="btn btn-t" href="https://www.linkedin.com/in/hatim-alsufyani/" target="_blank" rel="noopener">LinkedIn <span class="ch">›</span></a>
     </div>
   </section>
@@ -326,6 +334,22 @@
   addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>8),{passive:true});
   const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12,rootMargin:"0px 0px -8% 0px"});
   document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(Math.min(i,4)*55)+'ms';io.observe(el);});
+</script>
+
+<script>
+document.querySelectorAll('.mailwrap > a[href^="mailto:"]').forEach(function(a){
+  var fb=a.parentNode.querySelector('.mailfb');
+  a.addEventListener('click',function(){
+    var left=false; function gone(){left=true;}
+    window.addEventListener('blur',gone,{once:true}); document.addEventListener('visibilitychange',gone,{once:true});
+    setTimeout(function(){ window.removeEventListener('blur',gone); if(!left) fb.classList.add('show'); },1000);
+  });
+  fb.querySelector('[data-copy]').addEventListener('click',function(e){
+    var b=e.currentTarget; (navigator.clipboard?navigator.clipboard.writeText(b.dataset.copy):Promise.reject()).then(function(){b.textContent='Copied';}).catch(function(){});
+  });
+  document.addEventListener('click',function(e){ if(!a.parentNode.contains(e.target)) fb.classList.remove('show'); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') fb.classList.remove('show'); });
+});
 </script>
 </body>
 </html>
