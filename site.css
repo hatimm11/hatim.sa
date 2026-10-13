@@ -55,11 +55,20 @@ summary:hover{text-decoration:underline}
 .train>p{max-width:72ch;line-height:1.8}
 .train .tg{gap:28px}
 .selected-training{display:block}
-.selected-training>ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 28px}
+.selected-training>ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:20px;align-items:stretch}
+.selected-training>ul>li{display:flex;flex-direction:column;gap:16px;min-width:0;padding:26px 24px;border:0;border-radius:20px;background:var(--bg);box-shadow:0 1px 3px rgba(0,0,0,.04),0 10px 30px rgba(0,0,0,.05)}
+.selected-training .course-heading{min-height:3.4em;font-size:17px;line-height:1.7}
+.selected-training .course-heading .tn{font:inherit;font-weight:700;line-height:inherit}
+.selected-training .tm{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px;min-height:3.4em;margin:0;font-size:14px;line-height:1.7}
+.selected-training .tm>span{min-width:0}
+.selected-training .tm b{font-weight:400;font-variant-numeric:tabular-nums}
+.selected-training .sks{margin:0;margin-top:auto;gap:6px}
+.selected-training .sk{background:var(--soft);font-size:13px;line-height:1.6;padding:4px 10px}
+[dir=rtl] .selected-training .course-heading{letter-spacing:0}
 .tg .tn,.additional-training .tn{font-size:16px;line-height:1.6}
 .tg .tm,.additional-training .tm{font-size:14px;line-height:1.7}
 .tg .sk,.additional-training .sk{font-size:13px;background:#fff;white-space:normal}
-.course-original{display:block;font-size:14px;color:var(--sub);line-height:1.5;margin-top:4px;text-align:start}
+.selected-training .sk{background:var(--soft)}
 .training-more{margin-top:24px;border-top:1px solid var(--line);padding-top:12px}
 .additional-training{margin-top:32px}
 .additional-training h4{font-size:15px;margin-bottom:10px}
@@ -67,11 +76,20 @@ summary:hover{text-decoration:underline}
 .additional-training .tn,.additional-training .tm,.additional-training .sks{display:block;margin-top:6px}
 .additional-training .tm b{margin-inline-start:14px;font-weight:400}
 .additional-training .sk{display:inline-block;padding:2px 9px;border-radius:980px;margin-inline-end:6px}
-.mailwrap{gap:12px;align-items:center;flex-wrap:wrap;justify-content:center}
-.mail-options{position:relative;font-size:15px}
-.mail-options>summary{min-height:44px;padding:10px 0;color:var(--accent)}
-.mail-panel{position:absolute;inset-inline-start:50%;transform:translateX(-50%);top:100%;min-width:230px;max-width:calc(100vw - 40px);z-index:80;background:var(--bg);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.12);padding:8px;text-align:start}
-[dir=rtl] .mail-panel{transform:translateX(50%)}
+.contact .contact-actions{align-items:center;gap:16px}
+.email-action{display:inline-flex;align-items:stretch;position:relative;direction:ltr;min-height:56px;border-radius:980px;background:var(--accent);color:#fff}
+.email-address{display:flex;align-items:center;justify-content:center;min-height:56px;padding:0 24px;color:inherit;font-size:17px;white-space:nowrap;border-radius:980px 0 0 980px}
+.email-address:hover,.mail-options>summary:hover{background:rgba(0,0,0,.08);text-decoration:none}
+.mail-options{font-size:15px}
+.mail-options>summary{display:flex;align-items:center;justify-content:center;list-style:none;width:48px;height:56px;border-inline-start:1px solid rgba(255,255,255,.3);border-radius:0 980px 980px 0;color:inherit}
+.mail-options>summary::-webkit-details-marker{display:none}
+.mail-options>summary svg{transition:transform .2s ease}
+.mail-options[open]>summary svg{transform:rotate(180deg)}
+.mail-panel{position:absolute;left:0;bottom:calc(100% + 12px);width:100%;min-width:230px;max-width:calc(100vw - 40px);z-index:80;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 36px rgba(0,0,0,.12);padding:8px;text-align:start;direction:ltr}
+[dir=rtl] .mail-panel{direction:rtl}
+.linkedin-action{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 26px;border:1px solid var(--line);border-radius:980px;color:var(--ink);font-size:17px;transition:background .2s ease,border-color .2s ease}
+.linkedin-action:hover{background:var(--soft);border-color:rgba(0,0,0,.2)}
+.linkedin-action img{display:block;width:24px;height:24px;border-radius:4px;flex-shrink:0}
 .mail-panel a,.mail-panel button{display:block;width:100%;text-align:start;font:inherit;font-size:15px;color:var(--ink);background:none;border:0;border-radius:8px;padding:12px;cursor:pointer}
 .mail-panel a:hover,.mail-panel button:hover{background:var(--soft)}
 .copy-status:not(:empty){padding:10px;font-size:14px;overflow-wrap:anywhere}
@@ -91,9 +109,9 @@ summary:hover{text-decoration:underline}
  .project-copy h3{font-size:2.1rem}.about .atext{margin-top:24px}
  .training-delivered{padding:24px}.contact{padding:80px 20px}
  .cards{margin-top:30px}.card{padding:28px}.cred-list{margin-top:30px}
- .mailwrap{display:flex;flex-direction:column;gap:4px}.contact .cta{align-items:flex-start}
- .mail-panel,[dir=rtl] .mail-panel{position:static;transform:none;width:min(230px,calc(100vw - 40px));min-width:0;margin-top:8px}
 }
-@media(max-width:640px){.selected-training>ul{grid-template-columns:1fr;gap:8px}.featured-project{padding:20px}.train{margin-top:44px}.tg .tm{flex-wrap:wrap;gap:2px 12px}}
+@media(max-width:640px){.selected-training>ul{grid-template-columns:1fr;grid-auto-rows:auto;gap:16px}.selected-training .course-heading,.selected-training .tm{min-height:0}.selected-training>ul>li{padding:24px}.featured-project{padding:20px}.train{margin-top:44px}.tg .tm{flex-wrap:wrap;gap:2px 12px}}
 @media(max-width:480px){.row{grid-template-columns:1fr;gap:10px;padding:26px 0}.row .tag{display:block;grid-row:2}.row .d{grid-row:3}.cred .nw{white-space:normal}.chip{max-width:100%;overflow-wrap:anywhere}.nav-tools{gap:8px}}
 @media(prefers-reduced-motion:reduce){.rv.is-revealing{animation:none}.rv{opacity:1;transform:none}*{scroll-behavior:auto!important}}
+
+@media(max-width:480px){.contact .contact-actions{flex-direction:column;gap:12px}.email-action,.linkedin-action{width:min(100%,300px)}.email-address{flex:1;padding:0 18px}.mail-panel{min-width:0}}
