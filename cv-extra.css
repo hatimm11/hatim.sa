@@ -1,0 +1,16 @@
+.tnin{gap:16px}.tnin>a:not(.brand){font-size:14px}.topnav{height:auto;min-height:48px}
+.edu .e>div{min-width:0}.edu .e .d{text-align:end}.contact a{overflow-wrap:anywhere}
+.item .row .t,.cert .t{min-width:0}.item,.edu .e,.skills p{overflow-wrap:break-word}
+[dir=rtl] body{line-height:1.8}[dir=rtl] header.cv h1{line-height:1.4;letter-spacing:0}
+[dir=rtl] .role,[dir=rtl] .t,[dir=rtl] .lede,[dir=rtl] .x,[dir=rtl] .skills p,[dir=rtl] .item ul{letter-spacing:0;line-height:1.8}
+[dir=rtl] .h{letter-spacing:0;font-size:16px;font-weight:700}
+:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+@media(max-width:480px){.edu .e{grid-template-columns:1fr}.edu .e .d{grid-row:1;text-align:start}.tnin{padding:0 16px;gap:8px}.page{padding:36px 20px 60px}.print{padding:7px 10px}.nw{white-space:normal}}
+@media print{
+ @page{size:A4;margin:14mm}
+ .page{padding:0;max-width:none}.topnav{display:none}section.blk{margin-top:24px}
+ .h{margin-bottom:12px;break-after:avoid}.item .row,.edu .e .t{break-after:avoid}
+ .item{padding:14px 0}.edu .e,.cert{break-inside:avoid}.skills p,li{orphans:2;widows:2}
+ header.cv h1{font-size:28pt}header.cv .role{font-size:13pt}.lede{font-size:11pt}
+ .item ul,.note,.skills p,.edu .e .x{font-size:10pt}footer{padding:18px 0 0;margin-top:20px}
+}
