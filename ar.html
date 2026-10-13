@@ -31,7 +31,6 @@
   header.scrolled{border-bottom-color:var(--line)}
   .bar{max-width:1000px;margin:0 auto;padding:0 24px;height:48px;display:flex;align-items:center;justify-content:space-between}
   .brand{display:flex;align-items:center;gap:9px;font-size:18px;font-weight:700}
-  .mk{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:7px;background:var(--ink);color:#fff;font-size:15px;font-weight:700}
   nav{display:flex;gap:26px;font-size:14px;color:var(--sub);align-items:center}
   nav a{transition:color .25s}
   nav a:hover{color:var(--ink)}
@@ -183,12 +182,14 @@
     .hero p{margin-inline:auto}
     .hero .cta{justify-content:center}
   }
+
+  .brand .wm{font-family:"TajaribDisp","Tajarib",system-ui,sans-serif;font-weight:700;font-size:25px;line-height:1;letter-spacing:0;font-feature-settings:'ss01'}
 </style>
 </head>
 <body>
 <header id="hd">
   <div class="bar">
-    <a class="brand" href="#top"><span class="mk">ح</span>حاتم</a>
+    <a class="brand" href="#top" aria-label="حاتم السفياني"><span class="wm" lang="ar" dir="rtl">حاتم</span></a>
     <nav>
       <a class="nlink" href="#about">نبذة</a>
       <a class="nlink" href="#work">الأعمال</a>
