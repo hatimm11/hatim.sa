@@ -251,7 +251,7 @@ These follow the same Apple guidance:
 - `h3` followed by `--sub` text, start-aligned.
 - Used three per row (one column under 820px).
 
-**Rows** `.row` (projects) and `.cred` (qualifications and certificates)
+**Rows** `.row` (legacy) and `.cred` (qualifications and certificates)
 - Two-column grid: title, then role or year on the end side.
 - Full-width description below, hairline underneath.
 
@@ -262,10 +262,11 @@ These follow the same Apple guidance:
 - `--ink` items at weight 500, separated by grey 4px dots.
 - JS adds `.ls` to the first item on each wrapped line to hide its dot.
 
-**Secondary project previews**
-- Tawasol Yanbu and Yanbu Secondary each use a genuine 1200×800 WebP screenshot of their public landing page. No generated or reconstructed interface.
-- Preserve flat project rows and their hairlines. Place the preview beside the text, at most 300px wide, with radius 20px and no shadow. At 640px and below, place it above the text.
-- Use descriptive alt text, explicit image dimensions and lazy loading. Keep the existing blue visit link.
+**Selected project cards** `.featured-project`
+- All three projects — Shawahid, Tawasol Yanbu and Yanbu Secondary — share the same card component in both languages. Use a 24px radius, standard hairline, 36px padding and a two-column text/image layout. The first card starts 40px below the heading; subsequent cards are separated by 28px.
+- Text uses the same blue role label, 2.5rem project title, description and primary blue visit button. Preserve project-specific facts and details when available; do not add filler metrics to force matching heights.
+- All previews share a 3:2 frame, radius 20px, the existing subtle image shadow and a centered caption. At 820px and below, the image appears above the text; use the existing responsive card padding and title scale.
+- Tawasol Yanbu and Yanbu Secondary use genuine 1200×800 WebP screenshots of their public landing pages, with descriptive alt text, explicit dimensions and lazy loading.
 
 **Contact actions and mail options**
 - One blue email capsule, with the address and a separate native `details.mail-options` disclosure inside it. The address opens `mailto:` directly.
