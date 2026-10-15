@@ -263,8 +263,10 @@ These follow the same Apple guidance:
 - JS adds `.ls` to the first item on each wrapped line to hide its dot.
 
 **Selected project cards** `.featured-project`
-- All three projects — Shawahid, Tawasol Yanbu and Yanbu Secondary — share the same card component in both languages. Use a 24px radius, standard hairline, 36px padding and a two-column text/image layout. The first card starts 40px below the heading; subsequent cards are separated by 28px.
+- All four projects, in this order — the Shawahid Al-Muallim iPhone app, Shawahid Free Tools, Tawasol Yanbu and Yanbu Secondary — share the same card component in both languages. Use a 24px radius, standard hairline, 36px padding and a two-column text/image layout. The first card starts 40px below the heading; subsequent cards are separated by 28px.
 - Text uses the same blue role label, 2.5rem project title, description and primary blue visit button. Preserve project-specific facts and details when available; do not add filler metrics to force matching heights.
+- When a card has a second action, wrap both in `.project-actions` (flex, wraps, 8px × 24px gap) and make the second a `.btn-t` text link with no inline padding, so it aligns with the text when it wraps. The app card's primary action opens its App Store listing (`apps.apple.com/sa/app/id6808918350`); its text link opens `shawahid.sa/app`.
+- The app card's preview, `shawahid-app.webp`, is a 1200×800 WebP with a transparent background: three real app screens (live class, home, evidence portfolio) in dark phone frames with a soft shadow, the middle one larger. Regenerate it from the app's own screenshots rather than mockups.
 - All previews share a 3:2 frame, radius 20px, the existing subtle image shadow and a centered caption. At 820px and below, the image appears above the text; use the existing responsive card padding and title scale.
 - Tawasol Yanbu and Yanbu Secondary use genuine 1200×800 WebP screenshots of their public landing pages, with descriptive alt text, explicit dimensions and lazy loading.
 
