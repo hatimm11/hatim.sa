@@ -3,5 +3,5 @@
 /* Elongated alternates belong only to the primary display headings and wordmark. */
 :lang(ar) :is(.hero h1,.h2,.contact h2,header.cv h1){font-feature-settings:"liga" 1,"calt" 1,"ss01" 1,"dlig" 0}
 .brand .wm{font-feature-settings:"ss01" 1}
-/* Long copy keeps natural joins and spacing; no forced letter stretching. */
-:lang(ar) :is(.atext p,.project-copy>p,.project-summary .d,.card p,.training-delivered p,.diss .ds,.cred .cm,.train>p,.project-details dd,.lede,.note,.skills p,.item li,.edu .x){text-align:start;text-wrap:pretty;word-spacing:normal}
+/* Long copy is justified; kashida.js fills each line with tatweel at classical joining points. Never letter-spacing. */
+:lang(ar) :is(.atext p,.project-copy>p,.project-summary .d,.card p,.training-delivered p,.diss .ds,.cred .cm,.train>p,.project-details dd,.lede,.note,.skills p,.item li,.edu .x){text-align:justify;text-align-last:start;text-wrap:pretty;word-spacing:normal}
